@@ -60,7 +60,7 @@ jobs:
           git add packages/cli/Cargo.toml
           git commit -m "Update pkg-url to ${{ github.event.release.tag_name }}"
           git tag -f ${{ github.event.release.tag_name }}
-          git push origin --tags --force
+          git push origin --tags
 
       # This neat action can build and upload the binary in one go!
       - name: Build and upload binary
